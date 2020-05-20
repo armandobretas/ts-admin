@@ -15,7 +15,7 @@
   margin: 16px;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .logo span {
@@ -70,4 +70,15 @@
   z-index: 9;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.header-drop {
+  cursor: pointer;
+  transition: border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+    padding 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.header-drop:hover {
+  filter: opacity(0.9);
 }

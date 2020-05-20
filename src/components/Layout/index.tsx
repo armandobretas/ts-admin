@@ -1,21 +1,19 @@
 import React, { useState } from "react";
-import { Layout, Menu, Dropdown } from "antd";
+import { Layout, Menu, Dropdown, Breadcrumb, Divider } from "antd";
 import { Link } from "react-router-dom";
 import {
-  UploadOutlined,
+  HomeOutlined,
   MenuUnfoldOutlined,
   MenuFoldOutlined,
   UserOutlined,
   DownOutlined,
   PoweroffOutlined,
-  VideoCameraOutlined,
 } from "@ant-design/icons";
 import logoImg from "../../assets/logo.svg";
 import userImg from "../../assets/user.svg";
 import "./styles.css";
 
 const { Header, Content, Footer, Sider } = Layout;
-const { SubMenu } = Menu;
 
 interface PropsChildren {
   children?: {};
@@ -23,6 +21,7 @@ interface PropsChildren {
 
 const _Layout = (props: PropsChildren) => {
   const [collapsed, setCollapsed] = useState(true);
+  const [activeMenu, setActiveMenu] = useState("Dashboard")
 
   const handleCollapsed = () => setCollapsed(!collapsed);
 
@@ -46,8 +45,11 @@ const _Layout = (props: PropsChildren) => {
           <span className={!collapsed ? "" : "title-invisible"}>TS-ADMIN</span>
         </div>
         <Menu theme="light" mode="inline" defaultSelectedKeys={["1"]}>
-          <Menu.Item key="1" icon={<UserOutlined />}>
-            Usuários
+          <Menu.Item key="1" icon={<HomeOutlined />} onClick={() => setActiveMenu("Dashboard")}>
+            <Link to="/admin">Dashboard</Link>
+          </Menu.Item>
+          <Menu.Item key="2" icon={<UserOutlined />} onClick={() => setActiveMenu("Usuários")}>
+            <Link to="/users">Usuários</Link>
           </Menu.Item>
         </Menu>
       </Sider>
@@ -72,19 +74,27 @@ const _Layout = (props: PropsChildren) => {
                 </Menu>
               }
             >
-              <a href="#" className="ant-dropdown-link">
+              <div className="ant-dropdown-link header-drop">
                 Bem vindo, Admin &nbsp;
                 <img src={userImg} alt="Icon user" width={30} /> &nbsp;
                 <DownOutlined />
-              </a>
+              </div>
             </Dropdown>
           </div>
         </Header>
+        <Breadcrumb style={{ padding: 20 }}>
+          <Breadcrumb.Item href="#">
+            <HomeOutlined />
+          </Breadcrumb.Item>
+          <Breadcrumb.Item href="#">
+            <span>{activeMenu}</span>
+          </Breadcrumb.Item>
+        </Breadcrumb>
         <Content
           className="site-layout-background"
           style={{
-            margin: "24px 16px",
-            padding: 24,
+            margin: "10px 16px",
+            padding: 10,
             height: "83vh",
           }}
         >

@@ -1,0 +1,9 @@
+.content-header{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.content-table{
+    padding-top: 50px;
+}
