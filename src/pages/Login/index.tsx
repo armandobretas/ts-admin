@@ -88,7 +88,7 @@ const Login: React.FC = () => {
         <p>
           <span
             onClick={() =>
-              window.open("https://github.com/armandobretas", "_blank")
+              window.open("https://github.com/armandobretas/ts-admin", "_blank")
             }
           >
             <GithubOutlined size={22} color="#41414d" />
