@@ -11,6 +11,7 @@ import {
   VideoCameraOutlined,
 } from "@ant-design/icons";
 import logoImg from "../../assets/logo.svg";
+import userImg from "../../assets/user.svg";
 import "./styles.css";
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -21,7 +22,7 @@ interface PropsChildren {
 }
 
 const _Layout = (props: PropsChildren) => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
   const handleCollapsed = () => setCollapsed(!collapsed);
 
@@ -29,7 +30,7 @@ const _Layout = (props: PropsChildren) => {
     <Layout>
       <Sider
         trigger={null}
-        breakpoint="lg"
+        breakpoint="md"
         onBreakpoint={(broken) => {
           console.log(broken);
           handleCollapsed();
@@ -71,11 +72,10 @@ const _Layout = (props: PropsChildren) => {
                 </Menu>
               }
             >
-              <a
-                className="ant-dropdown-link"
-                onClick={(e) => e.preventDefault()}
-              >
-                Bem vindo, Admin <DownOutlined />
+              <a href="#" className="ant-dropdown-link">
+                Bem vindo, Admin &nbsp;
+                <img src={userImg} alt="Icon user" width={30} /> &nbsp;
+                <DownOutlined />
               </a>
             </Dropdown>
           </div>
@@ -88,12 +88,12 @@ const _Layout = (props: PropsChildren) => {
             height: "83vh",
           }}
         >
-          Content
+          {props.children}
         </Content>
-        <Footer style={{ textAlign: "center" }}>
-          TS Admin ©2020 - Desenvolvido por Armando L. Bretas Neto
-        </Footer>
       </Layout>
+      <Footer style={{ textAlign: "center", width: "100%" }}>
+        TS Admin ©2020 - Desenvolvido por Armando L. Bretas Neto
+      </Footer>
     </Layout>
   );
 };

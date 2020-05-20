@@ -15,7 +15,7 @@
   margin: 16px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
 }
 
 .logo span {
@@ -44,11 +44,6 @@
   background: #fff;
 }
 
-.site-layout-background {
-  background: #fff;
-}
-
-body .ant-layout,
 .ant-layout-sider,
 .ant-layout-footer,
 .ant-layout-header {
@@ -57,4 +52,22 @@ body .ant-layout,
 
 .ant-menu {
   height: 87vh;
+}
+
+.ant-layout-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 29;
+  transition: width 0.2s;
+  box-shadow: 4px 4px 40px 0 rgba(0, 0, 0, 0.05);
+  padding: 0;
+  position: relative;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 72px;
+  z-index: 9;
+  -ms-flex-align: center;
+  align-items: center;
 }
