@@ -17,7 +17,7 @@
 
 ## :rocket: Tecnologias
 
-Você pode visualizar o projeto através [desse link](https://github.com/armandobretsa/ts-admin). 
+Você pode visualizar o projeto através [desse link](https://master.d23g9m2ko06d7l.amplifyapp.com/). 
 
 - [Typescript](https://www.typescriptlang.org/)
 - [React](https://reactjs.org)
