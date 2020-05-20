@@ -1,0 +1,60 @@
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo span {
+  text-align: center;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1890ff;
+  background-image: -webkit-gradient(
+    linear,
+    37.219838% 34.532506%,
+    36.425669% 93.178216%,
+    from(#29cdff),
+    to(#0a60ff),
+    color-stop(0.37, #148eff)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-invisible {
+  display: none;
+}
+
+.site-layout-sub-header-background {
+  background: #fff;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+
+body .ant-layout,
+.ant-layout-sider,
+.ant-layout-footer,
+.ant-layout-header {
+  background-color: #fff !important;
+}
+
+.ant-menu {
+  height: 87vh;
+}

@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+
+  width: 350px;
+  padding: 50px;
+  background-color: #ffffff9c;
+  border-radius: 4px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1890ff;
+  background-image: -webkit-gradient(
+    linear,
+    37.219838% 34.532506%,
+    36.425669% 93.178216%,
+    from(#29cdff),
+    to(#0a60ff),
+    color-stop(0.37, #148eff)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login button {
+  width: 100%;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  padding: 20px;
+}
+
+footer p span {
+  text-align: center;
+  font-weight: lighter;
+}
